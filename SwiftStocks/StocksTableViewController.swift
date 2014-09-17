@@ -22,15 +22,15 @@ class StocksTableViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     //UITableViewDataSource
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int  {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stocks.count
     }
 
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "cellId")
         //cell.textLabel.text = stocks[indexPath.row]
-        cell.textLabel.text = stocks[indexPath.row].0 //position 0 of the tuple: The Symbol "APPL"
-        cell.detailTextLabel.text = "\(stocks[indexPath.row].1)" + "%" //position 1 of the tuple: The value "99" into String
+        cell.textLabel!.text = stocks[indexPath.row].0 //position 0 of the tuple: The Symbol "APPL"
+        cell.detailTextLabel!.text = "\(stocks[indexPath.row].1)" + "%" //position 1 of the tuple: The value "99" into String
         return cell
     }
     
@@ -52,14 +52,14 @@ class StocksTableViewController: UIViewController, UITableViewDataSource, UITabl
         }
         
         //2
-        cell.textLabel.textColor = UIColor.whiteColor()
-        cell.detailTextLabel.textColor = UIColor.whiteColor()
-        cell.textLabel.font = UIFont(name: "HelveticaNeue-CondensedBold", size: 48)
-        cell.detailTextLabel.font = UIFont(name: "HelveticaNeue-CondensedBold", size: 48)
-        cell.textLabel.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25)
-        cell.textLabel.shadowOffset = CGSize(width: 0, height: 1)
-        cell.detailTextLabel.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25)
-        cell.detailTextLabel.shadowOffset = CGSize(width: 0, height: 1)
+        cell.textLabel!.textColor = UIColor.whiteColor()
+        cell.detailTextLabel!.textColor = UIColor.whiteColor()
+        cell.textLabel!.font = UIFont(name: "HelveticaNeue-CondensedBold", size: 48)
+        cell.detailTextLabel!.font = UIFont(name: "HelveticaNeue-CondensedBold", size: 48)
+        cell.textLabel!.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25)
+        cell.textLabel!.shadowOffset = CGSize(width: 0, height: 1)
+        cell.detailTextLabel!.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25)
+        cell.detailTextLabel!.shadowOffset = CGSize(width: 0, height: 1)
     }
     
     //Customize the height of the cell
